@@ -1,0 +1,15 @@
+
+
+<body id="bg">
+  <div id ="main">
+  <h1>{{ Project }}</h1>
+  <input type="text" placeholder="Add Your Task Here" #task />
+  <br />
+  <br />
+  <button id="addbutton" (click)="addTask(task.value)">Add Task</button>
+
+  <li class="dot" *ngFor="let item of tasklist">
+<ol>{{item.name}}<button id="rembutton" (click)="removeTask(item.id)">Remove</button></ol>
+  </li>
+  </div>
+</body>
